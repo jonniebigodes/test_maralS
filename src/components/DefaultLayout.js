@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import AnotherComponent from '../components/AnotherComponent';
 export class DefaultLayout extends Component {
   state = {
     width: 601, // or your default width here
@@ -51,7 +52,7 @@ export class DefaultLayout extends Component {
           <Header />
           <main>
             {isMobile && location.pathname === '/' ? (
-              <h1>Foo bar</h1>
+              <AnotherComponent {...this.props}/>
             ) : (
               this.props.children
             )}
