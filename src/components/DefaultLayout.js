@@ -52,7 +52,7 @@ export class DefaultLayout extends Component {
           <Header />
           <main>
             {isMobile && location.pathname === '/' ? (
-              <AnotherComponent {...this.props}/>
+              <AnotherComponent {...this.props}/> // <====this is where the magic happens all props are going to be passed down
             ) : (
               this.props.children
             )}
