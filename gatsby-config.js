@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
+    description:"Testing for MaralS"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,6 +13,13 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    `gatsby-transformer-json`,
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        path: `./src/data/`,
+      }
+    },
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
